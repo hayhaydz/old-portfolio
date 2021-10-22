@@ -1,0 +1,148 @@
+
+/*Portfolio Page*/
+
+.portfolio-page {
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.go-back {
+  position: fixed;
+  top: 25px;
+  left: 0;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  margin: 15px;
+  align-self: start;
+  border: 1px solid black;
+  padding: 0.3em 1.3em;
+  transition: .2s ease-in-out;
+}
+
+.go-back:hover,
+.go-back:focus {
+  color: black;
+  background-color: white;
+}
+
+.portfolio-h1 {
+	background-color: black;
+  color: white;
+	padding: .3em 1.3em;
+}
+
+.portfolio-section {
+  height: 100%;
+  width: 100%;
+}
+
+.websites {
+  height: 50%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.websites a {
+  text-align: center;
+  text-decoration: none;
+  background-image: url(templates/img/websites-normal.jpg);
+  background-position: center;
+  background-size: cover;
+  font-size: 400%;
+  padding: 13vh 0;
+  color: white;
+  transition: 0.25s ease-in-out;
+}
+
+.websites a:hover,
+.websites a:focus {
+  background-image: url(templates/img/websites-hover.jpg);
+  color: black;
+  text-decoration: underline;
+}
+
+.coming-soon {
+  height: 50%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coming-soon a {
+  text-align: center;
+  text-decoration: none;
+  background-image: url(templates/img/coming-soon-normal.jpg);
+  background-position: center;
+  background-size: cover;
+  font-size: 400%;
+  padding: 13vh 0;
+  color: white;
+  transition: 0.25s ease-in-out;
+}
+
+.coming-soon a:hover,
+.coming-soon a:focus {
+  background-image: url(templates/img/coming-soon-hover.jpg);
+  color: black;
+  text-decoration: underline;
+}
+
+
+/*Media Queries*/
+
+/*Google Nexus 7 Specific*/
+
+@media(max-height:600px) {
+  .websites a{
+    padding: 10vh 0;
+}
+
+.coming-soon a{
+  padding: 10vh 0;
+}
+}
+
+/*Other Width Media Queries*/
+
+@media(max-width: 1280px) {
+
+  .coming-soon a:hover,
+  .coming-soon a:focus {
+    color: rgb(4, 135, 123);
+  }
+}
+
+@media(max-width: 960px) {
+}
+
+@media(max-width: 760px ) {
+  .websites a{
+    font-size: 200%;
+ }
+
+ .coming-soon a{
+    font-size: 200%;
+ }
+}
+
+@media(max-width: 450px) {
+  .go-back {
+    position: static;
+    order: 0;
+    align-self: center;
+  }
+  .portfolio-h1 {
+  	order: -1;
+  }
+}
+
+@media(max-width: 340px) {
+}

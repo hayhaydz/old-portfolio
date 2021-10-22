@@ -1,0 +1,133 @@
+.WorkPiece {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 300px;
+
+    &__imgWrap {
+        position: relative;
+        z-index: 5;
+        width: 65%;
+
+        &:before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: (9 / 16) * 100%;
+          }
+    }
+
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    &__aside {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 65%;
+        margin-top: 25px;
+
+        &--title {
+            font-size: 32px;
+            font-weight: 500;
+            letter-spacing: 5px;
+            color: #101010;
+            max-width: 50%;
+            text-align: right;
+        }
+
+        &--link {
+            display: block;
+            background-color: #101010;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 300;
+            letter-spacing: 1px;
+            padding: 0.8em 3em;
+            transition: 200ms ease-in-out;
+            box-sizing: border-box;
+            border: 1px solid #101010;
+
+            &:hover {
+                background-color: #fff;
+                color: #101010;
+            }
+        }
+    }
+
+    &__number {
+        position: absolute;
+        z-index: 1;
+        top: -20%;
+        left: 8%;
+        font-size: 402px;
+        font-weight: 900;
+        color: #101010;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+/* Media Queries */
+@media(max-width: 780px) {
+    .WorkPiece {
+        align-items: flex-start;
+
+        &__imgWrap {
+            width: 100%;
+        }
+
+        &__aside {
+            width: 100%;
+        }
+
+        &__number {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 450px) {
+    .WorkPiece {
+        margin-bottom: 50px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media(max-width: 400px) {
+    .WorkPiece {
+        &__aside {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+
+            &--title, &--link {
+                max-width: 100%;
+            }
+
+            &--title {
+                order: 1;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+
+            &--link {
+                width: 100%;
+                margin-bottom: 10px;
+                order: 2;
+            }
+        }
+    }
+}

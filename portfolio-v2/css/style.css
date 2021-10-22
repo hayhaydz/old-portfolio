@@ -1,0 +1,816 @@
+h1 {
+  font-family: RobotoH1, sans-serif;
+}
+p {
+  font-family: OpenSans, sans-serif;
+}
+
+a {
+	font-family: OpenSans, sans-serif;
+}
+
+body,html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.stop-scrolling {
+  overflow: hidden;
+}
+
+/* PreLoader Start */
+.preLoader {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  animation: spin 2s linear infinite;
+  border: 3px solid transparent;
+  border-bottom-color:white;
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.loader::after,
+.loader::before {
+  content: '';
+  border-radius: 50%;
+}
+
+.loader::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 3px solid transparent;
+  border-left-color: white;
+  animation: spin 3s linear infinite;
+}
+
+.loader::after {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: white;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+
+/* PreLoader End */
+
+/* Navigation Start */
+.headerNavigation {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 90;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  visibility: hidden;
+  overflow: hidden;
+}
+.headerNavigation nav {
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.showMenu {
+  color: black;
+  margin: 10px 25px;
+}
+.hideMenu {
+  display: none;
+  color: black;
+  margin: 10px 25px;
+}
+.openNav {
+  font-size: 36px;
+}
+.closeNav {
+  font-size: 36px;
+}
+nav {
+  margin-left: -100%;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  opacity: 0.5;
+  transition: 0.1s ease-in;
+}
+nav a:hover {
+  opacity: 1;
+}
+.active {
+  opacity: 1;
+}
+/* Navigation End */
+/*Landing Screen Start*/
+
+.landingScreen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  width: 100%;
+  animation-name: backgroundChange;
+  animation-play-state: paused;
+	overflow: hidden;
+}
+.play {
+  animation-play-state: running;
+}
+.stop {
+  -moz-animation-name: none;
+  -webkit-animation-name: none;
+  -ms-animation-name: none;
+  animation-name: none;
+}
+@keyframes backgroundChange {
+    0% {background-color: rgb(0, 0, 0);}
+    50% {background-color: rgb(255, 255, 255);}
+    100% {background-color: rgb(0, 0, 0);}
+}
+.landingScreenName {
+  margin: 0;
+  padding: 0.5em;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  animation-name: h1BackgroundChange;
+  animation-play-state: paused;
+  /*Can't Select*/
+  /* -webkit-touch-callout: none;
+   -webkit-user-select: none;
+    -khtml-user-select: none;
+      -moz-user-select: none;
+       -ms-user-select: none;
+           user-select: none; */
+}
+
+.landingScreenName::selection {
+	background: white;
+}
+
+.landingScreenName::-moz-selection {
+	background: white;
+}
+
+@keyframes h1BackgroundChange {
+    0% {background-color: rgb(255, 255, 255);color: black;}
+    50% {background-color: rgb(0, 0, 0);color:white;}
+    100% {background-color: rgb(255, 255, 255);color:black;}
+}
+.h1play {
+  animation-play-state: running;
+}
+.h1stop {
+  -moz-animation-name: none;
+  -webkit-animation-name: none;
+  -ms-animation-name: none;
+  animation-name: none;
+}
+
+.scroll {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.scrollH4 {
+  color: white;
+  font-size: 180%;
+  font-family:RobotoH1;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin: 50px 0;
+  margin-bottom: 10px;
+  animation-name: scrollH4Change;
+  animation-play-state: paused;
+}
+@keyframes scrollH4Change {
+    0% {color:white;}
+    50% {color:black;}
+    100% {color:white;}
+}
+.scrollh4play {
+  animation-play-state: running;
+}
+.scrollh4stop {
+  -moz-animation-name: none;
+  -webkit-animation-name: none;
+  -ms-animation-name: none;
+  animation-name: none;
+}
+@keyframes ani-mouse {
+	0% {
+	opacity: 1;
+	top: 29%;
+	}
+	15% {
+	opacity: 1;
+	top: 50%;
+	}
+	50% {
+	opacity: 0;
+	top: 50%;
+	}
+	100% {
+	opacity: 0;
+	top: 29%;
+	}
+}
+.scroll-btn > * {
+ display: inline-block;
+ line-height: 18px;
+ font-size: 13px;
+ font-weight: normal;
+ color: #7f8c8d;
+ color: #ffffff;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *.active {
+ color: #ffffff;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *:active,
+.scroll-btn > *.active {
+ opacity: 0.8;
+ filter: alpha(opacity=80);
+}
+.mouse {
+	position: relative;
+	display: block;
+	width: 35px;
+	height: 55px;
+	margin: 0 auto 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 3px solid white;
+	border-radius: 23px;
+  animation-name: scrollChange;
+  animation-play-state: paused;
+}
+.scrollWheel {
+	position: absolute;
+	display: block;
+	top: 29%;
+	left: 50%;
+	width: 8px;
+	height: 8px;
+	margin: -4px 0 0 -4px;
+	background: white;
+	border-radius: 50%;
+	animation: ani-mouse 2.5s linear infinite;
+}
+@keyframes scrollChange {
+    0% {border-color: white;}
+    50% {border-color: black;}
+    100% {border-color: white;}
+}
+.scrollplay {
+  animation-play-state: running;
+}
+.scrollstop {
+  -moz-animation-name: none;
+  -webkit-animation-name: none;
+  -ms-animation-name: none;
+  animation-name: none;
+}
+
+.scrollwheelplay {
+  background-color: #000000;
+}
+.scrollwheelstop {
+  background-color: #ffffff;
+}
+
+/*Landing Screen Finish*/
+
+/*Content Start*/
+
+/* Portfolio */
+/* Header */
+.portfolio {
+	position: relative;
+	z-index: 10;
+	display: -webkit-box;
+ 	display: -ms-flexbox;
+ 	display: flex;
+ 	-webkit-box-align: flex-start;
+ 	-ms-flex-align: flex-start;
+ 	align-items: flex-start;
+ 	-webkit-box-pack: center;
+ 	-ms-flex-pack: center;
+ 	justify-content: center;
+ 	-webkit-box-orient: vertical;
+ 	-webkit-box-direction: normal;
+ 	-ms-flex-direction: row;
+ 	flex-direction: row;
+ 	position: relative;
+	overflow: hidden;
+}
+.portfolioIntro {
+	position: relative;
+	top: -200px;
+	width: 650px;
+	margin: 0;
+}
+.portfolioHeader {
+	margin: 10px 0;
+	font-size: 550%;
+	font-weight: 100;
+	font-family: Oswald;
+	text-transform: uppercase;
+}
+.portfolioDate {
+	font-size: 250%;
+	letter-spacing: 2px;
+	font-family: PT-Serif;
+}
+/* Examples */
+.examples {
+	width: 780px;
+}
+.example {
+	position: relative;
+	margin-bottom: 10px;
+	background: white;
+	width: 780px;
+	height: 500px;
+	min-width: 310px;
+	min-height: 480px;
+}
+.juniperMagazine {
+	margin-top: 50%;
+}
+.example2 {
+	margin-top: 60%;
+	margin-left: -15vw;
+	margin-bottom: 80%;
+}
+.portfolioImageCover {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+}
+.example2Image {
+	background-image: url(../images/sideofdogface.jpg);
+	background-size: cover;
+	background-position: center top;
+	margin: auto;
+	height: 100%;
+	width: 100%;
+}
+.juniperMagazineImage {
+	background-image: url(../images/productCover.jpg);
+	background-size: cover;
+	background-position: center top;
+	margin: auto;
+	height: 100%;
+	width: 100%;
+}
+.exampleTitles {
+	position: absolute;
+	top: 10%;
+	left: 0;
+	margin-left: -5%;
+	overflow: hidden;
+}
+.exampleTitle {
+	display: inline-block;
+	color: white;
+	background-color: black;
+	font-size: 300%;
+	font-family: Chivo;
+	padding: 0em 0.3em;
+	margin: 5px 0;
+	margin-left: -100%;
+	text-align: left;
+}
+.titleCover {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: black;
+	margin-left: -100%;
+}
+.template {
+	font-size: 200%;
+}
+.viewContainer {
+	position: relative;
+	left: -100%;
+	opacity: 0;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.viewContainer a {
+	display: inline;
+	font-family: Homizio-Nova;
+	color: black;
+	text-decoration: none;
+	background-color: white;
+	padding: 0.5em 2em;
+	border: 2px solid black;
+	font-size: 1.5em;
+	transition: 0.2s ease-in-out;
+}
+.viewContainer a:hover,
+.viewContainer a:focus {
+	background-color: black;
+	color: white;
+}
+/* Portfolio Finish*/
+/* About Start */
+.about {
+	position: relative;
+	z-index: 0;
+	background-color: black;
+	margin: 0;
+	padding-top: 10%;
+	overflow: hidden;
+}
+/* Heading */
+.aboutHeading {
+	position: relative;
+	z-index: 10;
+	font-family: PT-Serif;
+	color: Black;
+  background-color: White;
+	font-size: 400%;
+  text-align: center;
+	padding: 0.2em;
+}
+.aboutPortrait {
+	position: absolute;
+	left: 5%;
+	width: 40%;
+}
+/* Text */
+.aboutText {
+	position: relative;
+	z-index: 2;
+	color: white;
+	font-size: 160%;
+	margin: 0 50px;
+	margin-left: 50%;
+}
+.aboutText p {
+	font-family: OpenSans-Light;
+}
+.college {
+	color: #CF2017;
+}
+.name {
+	position: relative;
+	z-index: 2;
+	margin: 10px 50px;
+	margin-left: 50%;
+}
+.name p{
+	margin-left: 10px;
+	color: white;
+	font-size: 170%;
+	font-family: LibreBaskerville;
+	display: inline-block;
+}
+
+.contact {
+	color: white;
+	margin-top: 20%;
+	margin-left: 5%;
+	margin-bottom: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.contactEmail h1 {
+	margin: 20px;
+	font-size: 300%;
+}
+.email  {
+	margin: 0.5em;
+	color: black;
+	font-size: 200%;
+	padding: 0.5em;
+	background-color: white;
+	text-decoration: none;
+	transition: 0.2s ease-in-out;
+}
+.email:hover,
+.email:focus {
+	color: white;
+	background-color: rgb(164, 125, 0);
+}
+.social {
+	margin-left: 5%;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.social h1 {
+	margin: 20px;
+	font-size: 300%;
+	margin-bottom: 0;
+}
+.socialLinks {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0.5em;
+}
+.behance {
+	text-decoration: none;
+	margin: 0 20px;
+	transition: 0.3s ease-in-out;
+}
+.behance:hover,.behance:focus {
+	transform: scale(1.3);
+}
+.behance:hover #behance,
+.behance:focus #behance {
+	fill:rgb(164, 125, 0);
+}
+.dribbble {
+	margin: 0 20px;
+	transition: 0.3s ease-in-out;
+}
+.dribbble:hover,
+.dribbble:focus {
+	transform: scale(1.3);
+}
+.dribbble:hover #dribbble,
+.dribbble:focus #dribbble {
+	fill:rgb(164, 125, 0);
+}
+.linkedIn {
+	margin: 0 20px;
+	transition: 0.3s ease-in-out;
+}
+.linkedIn:hover,
+.linkedIn:focus {
+	transform: scale(1.3);
+}
+.linkedIn:hover #linkedIn,
+.linkedIn:focus #linkedIn {
+	fill:rgb(164, 125, 0);
+}
+/* About Finish */
+/* Contact Start */
+/* Contact Finish */
+/*Content Finish*/
+
+/*Media Queries Start*/
+@media(max-width: 1430px) {
+	.examples{
+		margin-right: 50px;
+	}
+}
+@media(max-width: 1150px) {
+	.portfolioIntro {
+		margin-left: 20px;
+	}
+	.portfolioHeader {
+		font-size: 300%;
+	}
+	.portfolioDate {
+		font-size: 100%;
+	}
+	.example {
+		width: 720px;
+	}
+	.contactEmail {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.contact {
+		flex-direction: column;
+	}
+}
+@media(max-width: 1100px) {
+  .aboutHeading {
+    font-size: 300%;
+  }
+}
+@media(max-width: 960px) {
+	.example {
+		width: 620px;
+	}
+	.v1 {
+		margin-left: -5vw;
+	}
+}
+@media(max-width:850px){
+	.example {
+		width: 340px;
+		margin-left: -9vw;
+	}
+  .aboutHeading {
+    font-size: 250%;
+  }
+	.name {
+		font-size: 80%;
+	}
+}
+@media(max-width: 730px) {
+.landingScreenName {
+	font-size: 200%;
+}
+.aboutHeading {
+	font-size: 250%;
+}
+.aboutText {
+	font-size: 100%;
+}
+.name {
+	font-size: 70%;
+}
+}
+@media(max-width: 650px) {
+	.email {
+		font-size: 120%;
+	}
+	.name{
+		margin-right: 0;
+	}
+}
+@media(max-width: 560px) {
+	.aboutHeader{
+		margin-left: 10%;
+	}
+	.aboutPortrait {
+		position: relative;
+		margin-bottom: 20%;
+		width: 90%;
+	}
+	.aboutText {
+		margin-left: 10%;
+		margin-top: 0;
+	}
+	.name {
+		margin-left: 10%;
+	}
+}
+@media(max-width: 550px) {
+	.aboutText {
+		font-size: 90%;
+	}
+}
+@media(max-width: 450px) {
+.showMenu {
+	margin-left: 1px;
+}
+.portfolioHeader {
+	width: 1vw;
+	font-size: 200%;
+}
+.portfolioDate {
+	font-size: 100%;
+}
+.examples {
+	margin-right: 5vw;
+}
+.example {
+	margin-left: 0;
+}
+.exampleTitle {
+	font-size: 200%;
+}
+.viewContainer {
+	font-size: 80%;
+}
+.v1 {
+	margin-top: 50vh;
+}
+}
+@media(max-width: 430px) {
+.landingScreenName {
+	font-size: 160%;
+}
+.example {
+	margin-top: 100%;
+}
+.name {
+	font-size: 80%;
+}
+}
+@media(max-width: 400px) {
+	.exampleTitles {
+		margin-left: -2%;
+		margin-top: 20%;
+	}
+	.preTitle {
+		display: none;
+	}
+	.aboutHeading {
+		font-size: 300%;
+	}
+	.contact {
+		margin: 0;
+	}
+}
+@media(max-width: 370px) {
+	.greenacresBoarding {
+		margin-top: 70vh;
+	}
+	.aboutText {
+		font-size: 100%;
+	}
+	.name {
+		font-size: 60%;
+	}
+	.contact p{
+		font-size: 200%;
+	}
+}
+@media(max-width: 350px) {
+	.email {
+		font-size: 100%;
+	}
+	.behance {
+		transform: scale(0.5);
+		margin: 15px;
+	}
+	.behance:hover,.behance:focus {
+		transform: scale(1);
+	}
+	.dribbble {
+		transform: scale(0.5);
+		margin: 15px;
+	}
+	.dribbble:hover,
+	.dribbble:focus {
+		transform: scale(1.2);
+	}
+	.linkedIn {
+		transform: scale(0.5);
+		margin: 15px;
+	}
+	.linkedIn:hover,
+	.linkedIn:focus {
+		transform: scale(1);
+	}
+}
+@media(max-width: 320px) {
+.example {
+	width: 305px;
+	margin-right: 5px;
+}
+.v1 {
+	margin-top: 70vh;
+}
+.landingScreenName {
+	font-size: 140%;
+}
+.aboutHeading {
+	font-size: 260%;
+}
+}
+/*Media Queries End*/

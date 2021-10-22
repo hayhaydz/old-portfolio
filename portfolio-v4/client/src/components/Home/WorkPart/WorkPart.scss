@@ -1,0 +1,19 @@
+.WorkPart {
+    position: relative;
+    margin-bottom: 200px;
+
+    &__heading {
+        font-size: 34px;
+        font-weight: 500;
+        letter-spacing: 5px;
+        text-align: right;
+        margin-bottom: 50px;
+        color: #101010;
+    }
+}
+/* Media Queries */
+@media(max-width: 450px) {
+    .WorkPart {
+        margin-bottom: 50px;
+    }
+}

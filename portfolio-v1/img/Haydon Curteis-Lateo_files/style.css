@@ -1,0 +1,156 @@
+/*CSS RESET START*/
+
+html, body, div, span, applet, object, iframe, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS RESET END*/
+
+
+/*Content Start*/
+
+/*Landing Page*/
+
+.landing-page {
+  background-image: url(img/landing-page.jpeg);
+  background-size: cover;
+  background-position:0 0;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.building h1,h2 {
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+.button-about {
+  position: relative;
+  top: 100px;
+  transition: .1s ease-in-out;
+  transform: scale(1, 1);
+}
+.button-about a {
+  color: white;
+  padding: 1.5em 3em;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+}
+
+.button-about:hover,
+.button-about:focus {
+  transform: scale(1.15, 1.15);
+}
+
+
+/*About Page*/
+.about-page {
+  background-image: url(img/laptop_background.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  max-width: 70%;
+  max-height: 85%;
+  background-color: white;
+  border: 5px solid black;
+  padding: 20px;
+  justify-content: space-evenly;
+}
+.text {
+  margin: 10px 10px;
+  max-width: 70%;
+  align-self: center;
+}
+.image-about {
+  background-image: url(img/portrait.jpeg);
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  align-self: center;
+}
+.name {
+  position: absolute;
+  top: 232px;
+  right: 7%;
+  padding-top: 8px;
+  border-top: 1px solid rgba(73, 73, 73, 0.3);
+}
+
+
+
+
+/*Media Queries*/
+
+@media(max-width: 990px) {
+  .image-about {
+    display: none;
+  }
+  .text {
+    font-size: 80%;
+    order: 2;
+  }
+  .name {
+    position: static;
+    order: 1;
+    align-self: center;
+    border-bottom: 1px solid rgba(73, 73, 73, 0.3);
+    padding-bottom: 8px;
+    font-size:
+  }
+}

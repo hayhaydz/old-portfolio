@@ -1,0 +1,12 @@
+.Home {
+    max-width: 90%;
+    margin: auto;
+    padding-top: 80px;
+}
+
+/* Media Queries */
+@media(max-width: 680px) {
+    .Home { 
+        max-width: 98%;
+    }
+}

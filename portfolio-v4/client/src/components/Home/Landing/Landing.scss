@@ -1,0 +1,96 @@
+.Landing {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 80px);
+    margin-bottom: 200px;
+    transition: 200ms ease-in-out;
+
+    &__container {
+        position: absolute;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+
+        &--tagline {
+            color: #272727;
+            font-weight: 400;
+            font-size: 22px;
+            letter-spacing: 4px;
+        }
+    
+        &--scroll {
+            position: absolute;
+            bottom: 0;
+            margin: 25px 0;
+            padding: 0.2em 0.5em;
+            border: none;
+            background-color: #fff;
+            font-family: Rokkitt, serif;
+            font-size: 28px;
+            font-weight: 200;
+            letter-spacing: 10px;
+            color: #2c2c2c;
+            cursor: pointer;
+            outline: none;
+            text-decoration: none;
+
+            &:after {
+                position: absolute;
+                left: 0;
+                bottom: 45%;
+                transform: translateY(-55%);
+                display: block;
+                content: '';
+                width: 0;
+                height: 1px;
+                background-color: #2c2c2c;
+                transition: 200ms ease-in-out;
+            }
+
+            &:hover:after {
+               width: 100%;
+            }
+        }
+    }
+}
+/* PreLoader stuff */
+.preLoader .landing {
+    opacity: 0;
+}
+
+/* Media Queries */
+@media(max-width: 520px) {
+    .Landing__container {
+        &--tagline {
+            text-align: right;
+        }
+    }
+}
+@media(max-width: 450px) {
+    .Landing {
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 420px) {
+    .Landing__container {
+        width: 100%;
+
+        &--tagline {
+            font-weight: 600;
+        }
+
+        &--scroll {
+            background: none;
+            font-weight: 400;
+        }
+
+        &--tagline {
+            padding: 0.5em 1em;
+        }
+    }
+}

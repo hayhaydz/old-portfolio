@@ -1,0 +1,92 @@
+/*CSS RESET START*/
+
+html, body, div, span, applet, object, iframe, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+	position: relative;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS RESET END*/
+/*Scroll Bar Start*/
+::-webkit-scrollbar {
+  width: 0;
+}
+/*Scroll Bar End*/
+@font-face {
+ font-family: RobotoH1;
+ src: url(../font/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+	font-family: OpenSans;
+	src: url(../font/Open_Sans/OpenSans-Regular.ttf);
+}
+@font-face {
+	font-family: LibreBaskerville;
+ 	src: url(../font/Libre_Baskerville/LibreBaskerville-Regular.ttf);
+}
+@font-face {
+	font-family: OpenSans-Light;
+	src: url(../font/Open_Sans/OpenSans-Light.ttf);
+}
+@font-face {
+	font-family: Homizio-Nova;
+	src: url(../font/homizio_nova/light.ttf);
+}
+@font-face {
+	font-family: Chivo;
+  src: url(../font/Chivo/Chivo-Regular.ttf);
+}
+@font-face {
+	font-family: PT-Serif;
+  src: url(../font/PT_Serif/PT_Serif-Web-Regular.ttf);
+}
+@font-face {
+	font-family: Oswald;
+	src: url(../font/Oswald/Oswald-Regular.ttf);
+}
+@font-face {
+	font-family: Aleo;
+	src: url(../font/Aleo/Aleo-BoldItalic.otf);
+}
+@font-face {
+	font-family: Crimson_Text;
+	src: url(../font/Crimson_Text/CrimsonText-Regular.ttf);
+}
