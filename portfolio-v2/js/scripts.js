@@ -1,7 +1,7 @@
 // PreLoader Start
     $(window).on('load', function(){
       $("body").removeClass("stop-scrolling");
-        $("#preLoader").fadeOut();
+        $("#loader").fadeOut();
         $("#preLoader").delay(500).fadeOut();
     });
 // PreLoader End
